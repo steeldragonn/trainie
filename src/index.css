@@ -1,19 +1,31 @@
+@keyframes swipeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%); /* Start from 100% to the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End at original position */
+  }
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
-  position: relative;
-  margin-top: 70px;
+  position: fixed;
+  top: 60px; /*  below the navigation bar */
+  left: 0;
+  width: 100%;
+  margin-top: 0;
   text-align: center;
-  padding: 50px;
+  padding: 30px;
+  background-color: white; /* so header is visible over the content */
+  z-index: 999; /* lower than nav but above content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
 
 .footer {
   background-color: #282c34;
@@ -35,21 +47,78 @@ h1 {
   background-color: white;
   display: flex;
   justify-content: space-around; /* space around every item */
-  padding: 10px 0;
+  padding: 20px 0;
   z-index: 1000; /* to keep it on the top while scrolling */
-  font-weight: bold; /* Correct property for bold text */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow for better separation */
+  font-weight: bold;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
 }
 
 .nav-container p {
-  margin: 0; /* Removes default margin from <p> elements */
+  margin: 0;
 }
 
 .nav-container a {
   text-decoration: none;
-  color: #900c3f; /* Link color matching the nav container color */
+  color: #900c3f;
 }
 
-.content {
-  margin-left: 30px;
+.content,
+.content2,
+.content3,
+.content4,
+.content5,
+.content6 {
+  margin: 30px;
+  border: 2px solid black;
+  width: 400px; /* Keep a fixed width for the square */
+  height: 400px; /* Keep a fixed height for the square */
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  box-sizing: border-box; /* Include padding and border in the box size */
+  animation: swipeInRight 1s ease-out forwards;
+  flex-direction: column;
+  /* overflow: hidden; */
 }
+
+.content p,
+.content2 p,
+.content3 p,
+.content4 p,
+.content5 p,
+.content6 p {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  /* overflow: hidden; */
+  white-space: normal;
+  /* display: block; */
+  max-width: 100%;
+  /* animation: swipeInRight 1s ease-out forwards; */
+}
+
+.wholeContent {
+  margin-top: 170px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+  white-space: nowrap;
+}
+
+/* .content2 {
+  animation-delay: 0.2s; 
+}
+
+.content3 {
+  animation-delay: 0.6s; 
+}
+
+.content4 {
+  animation-delay: 0.12s; 
+}
+
+.content5 {
+  animation-delay: 0.15s; 
+} */
