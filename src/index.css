@@ -110,7 +110,7 @@ h1 {
   height: 400px;
   /* display: block; */
   box-sizing: border-box;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .wholeContent {
   margin-top: 170px;

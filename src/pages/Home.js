@@ -4,7 +4,7 @@ import React from "react";
 function Home() {
   return (
     <>
-      <h1 className="headline">not sure what it will be</h1>
+      <h1 className="headline">Mari ART</h1>
       <div className="wholeContent">
         <div className="content">
           <p>
@@ -89,6 +89,7 @@ function Home() {
           </p>
         </div>
       </div>
+      <div className="photo"></div>
     </>
   );
 }

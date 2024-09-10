@@ -1,6 +1,6 @@
 import React from "react";
 
-function Services() {
+function MyOrder() {
   return (
     <div>
       <h1>something interesting</h1>
@@ -8,4 +8,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default MyOrder;

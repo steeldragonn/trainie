@@ -11,11 +11,12 @@ function Nav() {
       <p className="nav2">
         <Link to="/about">about</Link>
       </p>
-      <p className="nav3">
-        <Link to="/services">services</Link>
-      </p>
+
       <p className="nav4">
         <Link to="/gallery">gallery</Link>
+      </p>
+      <p className="nav3">
+        <Link to="/myorder">my order</Link>
       </p>
     </nav>
   );
